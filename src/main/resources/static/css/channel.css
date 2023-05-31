@@ -1,0 +1,67 @@
+.welcomeUserMsg {
+	
+	text-align: center;
+	background-color:lightgrey;
+	font-size: 35px;
+}
+ul{
+	list-style:none;
+}
+.channleListLinks{
+	
+	text-align: center;
+	font-size: 25px;
+	color:black;
+	justify-content: center;
+	align-items: center;
+}
+.channleListLinks:hover{
+	color:green;
+	
+}
+.backChannel{
+	color: blue;
+	margin-top:40px;
+	float:right;
+}
+.backChannel:hover{
+	color: red;
+}
+.containerChannelList{
+	text-align: center;
+	background-color: #ccffcc ;
+}
+h3{	
+text-align: center;
+}
+.channelName{
+	font-weight:boldest;
+	font-size:20px;
+	text-align: center;
+	color: red;
+	
+}
+.messageInput{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:0;
+	padding:0;
+}
+.username{
+	font-weight: bolder;
+	font-size: 20px;
+	margin-left:30px;
+	
+	
+}
+#sendMessage{
+	margin-bottom:20px;
+}
+.message-container{
+	border-radius:5px;
+	border:3px solid;
+}
+.timestamp{
+	float:right;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Channels</title>
+<link rel="stylesheet" href="/css/channel.css">
+</head>
+<body>
+	<h2 class="welcomeUserMsg"></h2>
+<div class="containerChannelList">
+	<ul class="channelList">
+		<li th:each="channel : ${channels}">
+		  <a class="channleListLinks"
+			th:href="@{/channel/{id}(id=${channel.channelId}, username=${username})}"
+			th:text="${channel.name}">
+		  </a>
+		</li>
+	</ul>
+</div>
+	
+
+	<h3 th:if="${channel != null}">
+		You are now in channel: <span th:text="${channel.name}"
+			class="channelName"></span>
+
+	</h3>
+
+
+	<div th:if="${channel != null}" class="messageInput">
+
+		<form
+			th:action="@{/channel/{id}(id=${channel.channelId}, username=${username})}">
+			<input type="hidden" name="username" class="messageBox" /> <input
+				type="text" name="message" class="messageBox" />
+			<button type="submit" id="sendMessage">Send Message</button>
+		</form>
+	<div>
+		<a href="/channel" class="backChannel">Back to Other Channels</a>
+	</div>
+	</div>
+	
+
+
+	<div id="messageList" class="message-container"></div>
+
+
+
+	<script type="text/javascript" src="/js/channel.js"></script>
+</body>
+</html>
